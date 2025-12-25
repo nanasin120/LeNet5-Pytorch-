@@ -20,3 +20,34 @@ Unlike simplified modern versions, this implementation focuses on original detai
 * Python (Anaconda)
 * PyTorch, Torchvision
 * TensorBoard, tqdm
+
+##🛠 Installation & Usage
+1. Environment Setup
+Option A: Using Conda (Recommended)
+You can replicate the exact development environment used in this project using the provided environment.yml file.
+
+```
+# Create the environment (the name is defined within environment.yml)
+
+conda env create -f environment.yml
+
+# Activate the environment
+
+conda activate <environment_name>
+```
+Option B: Using Pip
+Alternatively, you can install the required dependencies directly using pip.
+```
+pip install -r requirements.txt
+```
+2. Training the Model
+Run the following command to start the training process on the MNIST dataset. The script will automatically download the dataset if it's not present.
+```
+python train.py
+```
+3. Monitoring Results
+You can monitor the training progress, including loss/accuracy curves and the model's computational graph, using TensorBoard.
+```
+tensorboard --logdir=runs
+```
+Once the server is running, open your web browser and navigate to: http://localhost:6006
