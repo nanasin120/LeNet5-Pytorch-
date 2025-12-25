@@ -15,6 +15,33 @@
 conda install torch torchvision tqdm tensorboard
 ```
 
+## 설치 및 실행 방법
+
+conda를 이용할 경우 제공된 environment.yml 파일을 사용하여 제가 사용한 개발 환경을 그대로 복제할 수 있습니다.
+```
+# 환경 생성 (환경 이름은 environment.yml 내부에 정의된 이름을 따릅니다)
+conda env create -f environment.yml
+
+# 가상환경 활성화
+conda activate [가상환경_이름]
+```
+
+혹은 pip를 이용할수도있습니다.
+```
+pip install -r requirements.txt
+```
+
+실행은 아래 코드로 가능합니다.
+```
+python train.py
+```
+
+결과를 확인하고 싶다면 아래 코드로 확인 가능합니다.
+```
+tensorboard --logdir=runs
+```
+명령어를 입력한 후 브라우저에서 http://localhost:6006으로 접속하시면 됩니다.
+
 ## 모델 소개
 
 LeNet-5모델은 논문안에 있는 내용과 최대한 비슷하게 구현했습니다.
